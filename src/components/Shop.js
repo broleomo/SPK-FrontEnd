@@ -10,6 +10,13 @@ export default class Shop extends Component {
     return(
       <div>
         <Container>
+          <div style={{display:'flex', justifyContent:'space-between'}}>
+            <Button color="secondary">Shop All</Button>
+            <Button color="secondary">Shop Music</Button>
+            <Button color="secondary">Shop Farming</Button>
+            <Button color="secondary">Shop Nature</Button>
+            <Button color="secondary">Shop Movies</Button>
+          </div>
           <Row>
             <Col md='6' lg='4'>
                 <Link to="/badge">
