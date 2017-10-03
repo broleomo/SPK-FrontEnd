@@ -19,6 +19,9 @@ export default class BaseLayout extends Component {
                   </NavbarBrand>
                   <Collapse navbar>
                     <Nav className="ml-auto" navbar>
+                    <NavItem>
+                    <NavLink to='/login' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Login</NavLink>
+                    </NavItem>
                       <NavItem>
                       <NavLink to='/shop' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Shop</NavLink>
                       </NavItem>

@@ -15,6 +15,7 @@ import Badge from './components/Badge';
 import Login from './components/Login';
 import Cart from './components/Cart';
 import Contact from './components/Contact';
+import Register from './components/Register';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -26,6 +27,7 @@ ReactDOM.render(
         <Route path='/login' component={Login}/>
         <Route path='/cart' component={Cart}/>
         <Route path='/contact' component={Contact}/>
+        <Route path='/register' component={Register}/>
       </Switch>
     </BaseLayout>
   </BrowserRouter>
