@@ -5,7 +5,6 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import './styles/index.css';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import App from './components/App';
 import registerServiceWorker from './registerServiceWorker';
 
 import BaseLayout from './components/BaseLayout';
@@ -16,6 +15,8 @@ import Login from './components/Login';
 import Cart from './components/Cart';
 import Contact from './components/Contact';
 import Register from './components/Register';
+import Terms from './components/Terms';
+import Thanks from './components/Thanks';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -28,6 +29,8 @@ ReactDOM.render(
         <Route path='/cart' component={Cart}/>
         <Route path='/contact' component={Contact}/>
         <Route path='/register' component={Register}/>
+        <Route path='/terms' component={Terms}/>
+        <Route path='/thanks' component={Thanks}/>
       </Switch>
     </BaseLayout>
   </BrowserRouter>

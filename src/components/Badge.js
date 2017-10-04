@@ -3,7 +3,7 @@ import '../styles/App.css';
 
 import {Link} from 'react-router-dom';
 
-import { Breadcrumb, BreadcrumbItem, Container, Row, Col, Card, CardImg, CardText, CardBlock, CardTitle, CardSubtitle, Button, FormGroup, Label, Input } from 'reactstrap';
+import { Breadcrumb, BreadcrumbItem, Container, Row, Col, Card, CardText, CardBlock, CardTitle, CardSubtitle, Button, FormGroup, Label, Input } from 'reactstrap';
 
 export default class Badge extends Component {
   render(){
