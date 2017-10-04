@@ -20,6 +20,9 @@ export default class BaseLayout extends Component {
                   <Collapse navbar>
                     <Nav className="ml-auto" navbar>
                     <NavItem>
+                    <NavLink to='/' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Home</NavLink>
+                    </NavItem>
+                    <NavItem>
                     <NavLink to='/login' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Login</NavLink>
                     </NavItem>
                       <NavItem>
@@ -42,14 +45,12 @@ export default class BaseLayout extends Component {
                 <Collapse navbar>
                   <Nav className="ml-auto" navbar>
                     <NavItem>
-                    <NavLink to='/terms-conditions' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Terms & Conditions</NavLink>
+                    <NavLink to='/terms' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Terms</NavLink>
                     </NavItem>
                     <NavItem>
-                    <NavLink style={{margin:'20px'}}to='/copyright' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Copyright</NavLink>
+                    <NavLink style={{margin:'20px'}} to='/copyright' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Copyright</NavLink>
                     </NavItem>
-                    <NavItem>
-                    <NavLink to='/contact' style={{margin:'5px', color:'#464547'}}>Contact Us</NavLink>
-                    </NavItem>
+
                   </Nav>
                 </Collapse>
       </Navbar>

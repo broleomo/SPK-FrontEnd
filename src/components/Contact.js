@@ -3,7 +3,7 @@ import '../styles/App.css';
 
 import {Link} from 'react-router-dom';
 
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 export default class Contact extends Component {
   render(){
@@ -21,7 +21,7 @@ export default class Contact extends Component {
           <FormGroup>
             <Label for="exampleText">Leave a comment</Label>
             <Input type="textarea" name="text" id="exampleText" placeholder="Comment..."/>
-        
+
           </FormGroup>
           <Link to="/thankyou"><Button style={{backgroundColor:'#F90093',color:'white',border:'none'}}>Submit</Button></Link>
         </Form>
