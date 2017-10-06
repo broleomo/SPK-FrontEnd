@@ -23,9 +23,6 @@ export default class BaseLayout extends Component {
                     <NavItem>
                     <NavLink to='/' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Home</NavLink>
                     </NavItem>
-                    <NavItem>
-                    <NavLink to='/login' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Login</NavLink>
-                    </NavItem>
                       <NavItem>
                       <NavLink to='/shop' activeClassName="selected" style={{margin:'5px', color:'#464547'}}>Shop</NavLink>
                       </NavItem>

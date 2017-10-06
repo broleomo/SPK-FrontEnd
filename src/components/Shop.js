@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom';
 import { Card, CardBlock,
   CardTitle, CardSubtitle, Container, Col, Row, Button } from 'reactstrap';
 
+const baseurl = 'https://sassy-patch-kids.herokuapp.com/';
 
 export default class Shop extends Component {
  state ={
@@ -13,7 +14,7 @@ export default class Shop extends Component {
  }
 
  componentDidMount(){
-   fetch('https://sassy-patch-kids.herokuapp.com/api/products')
+   fetch(`${baseurl}api/products`)
     .then(r => r.json())
       .then(data => this.setState({products: data.filter(products => products.patch)}))
  }
@@ -35,7 +36,7 @@ export default class Shop extends Component {
             <Col key={product.id} md='6' lg='4'>
                 <Link to={`/badge/${product.id}`}>
                   <Card style={{margin:'15px', padding:'10px'}}>
-                    <img src={product.patch} alt="image" />
+                    <img src={`${baseurl}${product.patch}`} width="100%" alt="image" />
                     <CardBlock>
                       <CardTitle>{product.product_name}</CardTitle>
                       <CardSubtitle>{`$${product.price/100}.00`}</CardSubtitle>

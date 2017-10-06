@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom';
 
 import { Breadcrumb, BreadcrumbItem, Container, Row, Col, Card, CardText, CardBlock, CardTitle, CardSubtitle, Button, FormGroup, Label, Input } from 'reactstrap';
 
+const baseurl = 'https://sassy-patch-kids.herokuapp.com/';
+
 export default class Badge extends Component {
   state ={
     results: ''
@@ -12,7 +14,7 @@ export default class Badge extends Component {
 
 componentDidMount(){
   const {id} = this.props.match.params;
-  let url = `https://sassy-patch-kids.herokuapp.com/api/products/${id}`;
+  let url = `${baseurl}api/products/${id}`;
   fetch(url)
     .then(response => response.json())
       .then(results => {this.setState({results:results})})
@@ -32,7 +34,7 @@ componentDidMount(){
           <Row>
             <Col md='6' lg='6'>
           <div className='badge-container'>
-            <img src={this.state.results.patch_id} alt='badge' width="100%"/>
+            <img src={`${baseurl}${this.state.results.patch}`} alt='badge' width="100%"/>
         </div>
             </Col>
             <Col md='6' lg='6'>
