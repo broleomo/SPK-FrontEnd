@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
-import image from '../styles/images/igp2.png';
+import image from '../images/igp2.png';
 
 import {Link} from 'react-router-dom';
 import { Card, CardBlock,

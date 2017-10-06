@@ -6,7 +6,7 @@
 }
 
 .home-header {
-  background-image: url("./images/iron-glory-background.jpg");
+  background-image: url("../images/iron-glory-background.jpg");
   height: 400px;
   background-size: cover;
   background-position: center;
