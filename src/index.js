@@ -17,10 +17,6 @@ import Contact from './components/Contact';
 import Register from './components/Register';
 import Terms from './components/Terms';
 import Thanks from './components/Thanks';
-import Music from './components/Music';
-import Farming from './components/Farming';
-import Nature from './components/Nature';
-import Movies from './components/Movies';
 import Cartid from './components/Cartid';
 
 ReactDOM.render(
@@ -37,10 +33,6 @@ ReactDOM.render(
         <Route path='/register' component={Register}/>
         <Route path='/terms' component={Terms}/>
         <Route path='/thanks' component={Thanks}/>
-        <Route path='/music' component={Music}/>
-        <Route path='/farming' component={Farming}/>
-        <Route path='/nature' component={Nature}/>
-        <Route path='/movies' component={Movies}/>
       </Switch>
     </BaseLayout>
   </BrowserRouter>
