@@ -134,7 +134,7 @@ export default class Cart extends Component {
               <CardTitle>Order Summary</CardTitle>
                 <Row>
                   <Col md='6' lg='6'>
-                    <img src='igp2.png' alt='badge' width="50%"/>
+                    <img src='../images/igp2.png' alt='badge' width="50%"/>
                     <CardSubtitle>Badge Name</CardSubtitle>
                     </Col>
                 </Row>

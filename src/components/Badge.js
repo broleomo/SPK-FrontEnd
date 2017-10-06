@@ -20,7 +20,7 @@ export default class Badge extends Component {
           <Row>
             <Col md='6' lg='6'>
           <div className='badge-container'>
-            <img src='igp2.png' alt='badge' width="100%"/>
+            <img src='../images/igp2.png' alt='badge' width="100%"/>
         </div>
             </Col>
             <Col md='6' lg='6'>
