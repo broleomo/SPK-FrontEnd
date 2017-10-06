@@ -6,68 +6,47 @@ import {Link} from 'react-router-dom';
 import { Card, CardBlock,
   CardTitle, CardSubtitle, Container, Col, Row, Button } from 'reactstrap';
 
+
 export default class Shop extends Component {
+ state ={
+   products: []
+ }
+
+ componentDidMount(){
+   fetch('https://sassy-patch-kids.herokuapp.com/api/products')
+    .then(r => r.json())
+      .then(data => this.setState({products: data.filter(products => products.patch)}))
+ }
+
   render(){
     return(
       <div>
         <Container>
           <div style={{display:'flex', justifyContent:'space-between'}}>
-            <Button color="secondary">Shop All</Button>
-            <Button color="secondary">Music</Button>
-            <Button color="secondary">Farming</Button>
-            <Button color="secondary">Nature</Button>
-            <Button color="secondary">Movies</Button>
+            <Button color="secondary"><Link to='/shop'>Shop All</Link></Button>
+            <Button color="secondary"><Link to='/music'>Music</Link></Button>
+            <Button color="secondary"><Link to='/farming'>Farming</Link></Button>
+            <Button color="secondary"><Link to='/nature'>Nature</Link></Button>
+            <Button color="secondary"><Link to='/movies'>Movies</Link></Button>
           </div>
+
           <Row>
-            <Col md='6' lg='4'>
-                <Link to="/badge">
-                <Card style={{margin:'15px', padding:'10px'}}>
-                  <img src={image} width="100%"  alt="imager" />
-                  <CardBlock>
-                    <CardTitle>Badge 1</CardTitle>
-                    <CardSubtitle>Badge 1 Price</CardSubtitle>
-                  </CardBlock>
-                </Card>
-              </Link>
-            </Col>
-            <Col md='6' lg='4'>
-                <Link to="/badge">
-                <Card style={{margin:'15px', padding:'10px'}}>
-                  <img src={image} width="100%"  alt="images" />
-                  <CardBlock>
-                    <CardTitle>Badge 1</CardTitle>
-                    <CardSubtitle>Badge 1 Price</CardSubtitle>
-                  </CardBlock>
-                </Card>
-              </Link>
-            </Col>
-            <Col md='6' lg='4'>
-                <Link to="/badge">
-                <Card style={{margin:'15px', padding:'10px'}}>
-                  <img src={image} width="100%"  alt="imagess" />
-                  <CardBlock>
-                    <CardTitle>Badge 1</CardTitle>
-                    <CardSubtitle>Badge 1 Price</CardSubtitle>
-                  </CardBlock>
-                </Card>
-              </Link>
-            </Col>
-            <Col md='6' lg='4'>
-                <Link to="/badge">
-                <Card style={{margin:'15px', padding:'10px'}}>
-                  <img src={image} width="100%"  alt="imagesss" />
-                  <CardBlock>
-                    <CardTitle>Badge 1</CardTitle>
-                    <CardSubtitle>Badge 1 Price</CardSubtitle>
-                  </CardBlock>
-                </Card>
-              </Link>
-            </Col>
-
-
-          </Row>
-      </Container>
-      </div>
+          {this.state.products.map(product => (
+            <Col key={product.id} md='6' lg='4'>
+                <Link to={`/badge/${product.id}`}>
+                  <Card style={{margin:'15px', padding:'10px'}}>
+                    <img src={product.patch} alt="image" />
+                    <CardBlock>
+                      <CardTitle>{product.product_name}</CardTitle>
+                      <CardSubtitle>{`$${product.price/100}.00`}</CardSubtitle>
+                    </CardBlock>
+                  </Card>
+                </Link>
+              </Col>
+              ))}
+            </Row>
+        </Container>
+        </div>
     )
   }
 }

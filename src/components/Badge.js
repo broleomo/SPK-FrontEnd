@@ -6,6 +6,18 @@ import {Link} from 'react-router-dom';
 import { Breadcrumb, BreadcrumbItem, Container, Row, Col, Card, CardText, CardBlock, CardTitle, CardSubtitle, Button, FormGroup, Label, Input } from 'reactstrap';
 
 export default class Badge extends Component {
+  state ={
+    results: ''
+  }
+
+componentDidMount(){
+  const {id} = this.props.match.params;
+  let url = `https://sassy-patch-kids.herokuapp.com/api/products/${id}`;
+  fetch(url)
+    .then(response => response.json())
+      .then(results => {this.setState({results:results})})
+}
+
   render(){
     return(
       <div className='container'>
@@ -20,7 +32,7 @@ export default class Badge extends Component {
           <Row>
             <Col md='6' lg='6'>
           <div className='badge-container'>
-            <img src='../images/igp2.png' alt='badge' width="100%"/>
+            <img src={this.state.results.patch_id} alt='badge' width="100%"/>
         </div>
             </Col>
             <Col md='6' lg='6'>
@@ -28,8 +40,8 @@ export default class Badge extends Component {
 
             <Card>
               <CardBlock>
-                <CardTitle>Badge 1 Name</CardTitle>
-                  <CardSubtitle>$9.99</CardSubtitle>
+                <CardTitle>{this.state.results.product_name}</CardTitle>
+                  <CardSubtitle>{`$${this.state.results.price/100}.00`}</CardSubtitle>
                   <FormGroup>
                     <Label for="exampleSelect">Quantity</Label>
                       <Input type="select" name="select" id="exampleSelect">
@@ -40,8 +52,8 @@ export default class Badge extends Component {
                         <option>5</option>
                       </Input>
                   </FormGroup>
-                  <CardText>Badge 1 description. Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</CardText>
-                  <Button style={{backgroundColor:'#F90093',border:'none'}}><Link to='/cart' style={{color:'white'}}> Add to Cart!</Link></Button>
+                  <CardText>{this.state.results.description}</CardText>
+                  <Button style={{backgroundColor:'#F90093',border:'none'}}><Link to={`/cart/${this.state.results.id}`} style={{color:'white'}}> Add to Cart!</Link></Button>
               </CardBlock>
             </Card>
         </div>

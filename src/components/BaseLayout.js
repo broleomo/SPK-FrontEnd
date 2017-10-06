@@ -16,7 +16,7 @@ export default class BaseLayout extends Component {
         <div className="top-nav-container">
           <Navbar light toggleable>
                   <NavbarToggler right />
-                  <NavbarBrand href="/"><img width='50%' className='logo' src='../images/iron-glory-logo.png' alt="logo"/>
+                  <NavbarBrand href="/"><img width='50%' className='logo' src='iron-glory-logo.png' alt="logo"/>
                   </NavbarBrand>
                   <Collapse navbar>
                     <Nav className="ml-auto" navbar>
@@ -41,7 +41,7 @@ export default class BaseLayout extends Component {
       <div className="bottom-nav-container">
         <Navbar light toggleable>
                 <NavbarToggler right />
-                <NavbarBrand href="/"><img width='20%' className='logo' src='../images/iron-glory-logo.png' alt="logo"/>
+                <NavbarBrand href="/"><img width='20%' className='logo' src='iron-glory-logo.png' alt="logo"/>
                 </NavbarBrand>
                 <Collapse navbar>
                   <Nav className="ml-auto" navbar>
