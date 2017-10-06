@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import '../styles/App.css';
+import image from '../styles/images/igp2.png';
 
 import {Link} from 'react-router-dom';
 import { Card, CardBlock,
@@ -21,7 +22,7 @@ export default class Shop extends Component {
             <Col md='6' lg='4'>
                 <Link to="/badge">
                 <Card style={{margin:'15px', padding:'10px'}}>
-                  <img src="igp2.png" width="100%"  alt="imager" />
+                  <img src={image} width="100%"  alt="imager" />
                   <CardBlock>
                     <CardTitle>Badge 1</CardTitle>
                     <CardSubtitle>Badge 1 Price</CardSubtitle>
@@ -32,7 +33,7 @@ export default class Shop extends Component {
             <Col md='6' lg='4'>
                 <Link to="/badge">
                 <Card style={{margin:'15px', padding:'10px'}}>
-                  <img src="igp2.png" width="100%"  alt="images" />
+                  <img src={image} width="100%"  alt="images" />
                   <CardBlock>
                     <CardTitle>Badge 1</CardTitle>
                     <CardSubtitle>Badge 1 Price</CardSubtitle>
@@ -43,7 +44,7 @@ export default class Shop extends Component {
             <Col md='6' lg='4'>
                 <Link to="/badge">
                 <Card style={{margin:'15px', padding:'10px'}}>
-                  <img src="igp2.png" width="100%"  alt="imagess" />
+                  <img src={image} width="100%"  alt="imagess" />
                   <CardBlock>
                     <CardTitle>Badge 1</CardTitle>
                     <CardSubtitle>Badge 1 Price</CardSubtitle>
@@ -54,7 +55,7 @@ export default class Shop extends Component {
             <Col md='6' lg='4'>
                 <Link to="/badge">
                 <Card style={{margin:'15px', padding:'10px'}}>
-                  <img src="igp2.png" width="100%"  alt="imagesss" />
+                  <img src={image} width="100%"  alt="imagesss" />
                   <CardBlock>
                     <CardTitle>Badge 1</CardTitle>
                     <CardSubtitle>Badge 1 Price</CardSubtitle>
